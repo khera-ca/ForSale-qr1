@@ -11,37 +11,42 @@
       --gold:#c8a96b;
       --ink:#1f2937;
       --muted:#6b7280;
-      --bg:#f7f4ef;
       --card:#ffffff;
       --line:#e5dfd3;
       --ok:#0f766e;
       --shadow:0 20px 50px rgba(15,39,71,.12);
       --radius:20px;
     }
+
     *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family:Arial,Helvetica,sans-serif;
       background:linear-gradient(180deg,#f8f4ee 0%,#f5efe7 100%);
       color:var(--ink);
     }
+
     .wrap{
       max-width:980px;
       margin:0 auto;
       padding:24px;
     }
+
     .hero{
       display:grid;
       grid-template-columns:1.1fr .9fr;
       gap:24px;
       align-items:stretch;
     }
+
     .card{
       background:var(--card);
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
     }
+
     .brand{
       padding:28px;
       display:flex;
@@ -49,6 +54,7 @@
       justify-content:center;
       min-height:100%;
     }
+
     .badge{
       display:inline-block;
       padding:8px 12px;
@@ -61,12 +67,14 @@
       text-transform:uppercase;
       margin-bottom:14px;
     }
+
     h1{
       margin:0 0 12px;
       font-size:42px;
       line-height:1.06;
       color:var(--navy);
     }
+
     .sub{
       font-size:18px;
       line-height:1.6;
@@ -74,13 +82,16 @@
       max-width:54ch;
       margin-bottom:22px;
     }
+
     .logos{
       display:flex;
       gap:16px;
       align-items:center;
       flex-wrap:wrap;
       margin-top:10px;
+      margin-bottom:14px;
     }
+
     .logos img{
       max-height:72px;
       width:auto;
@@ -89,6 +100,7 @@
       background:#fff;
       padding:4px;
     }
+
     .agent{
       display:flex;
       align-items:center;
@@ -97,6 +109,7 @@
       padding-top:20px;
       border-top:1px solid var(--line);
     }
+
     .agent img{
       width:96px;
       height:96px;
@@ -104,42 +117,52 @@
       object-fit:cover;
       border:1px solid var(--line);
       background:#fff;
+      flex-shrink:0;
     }
+
     .agent .meta strong{
       display:block;
       font-size:20px;
       color:var(--navy);
     }
+
     .agent .meta span{
       display:block;
       color:var(--muted);
       margin-top:4px;
       line-height:1.45;
     }
+
     .formCard{
       padding:28px;
     }
+
     .formTitle{
       margin:0 0 8px;
       font-size:28px;
       color:var(--navy);
     }
+
     .formText{
       margin:0 0 20px;
       color:var(--muted);
       line-height:1.6;
     }
+
     .grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
     }
+
     .field{
       margin-bottom:14px;
     }
+
     .full{
       grid-column:1 / -1;
     }
+
     label{
       display:block;
       font-size:14px;
@@ -147,6 +170,7 @@
       margin-bottom:8px;
       color:var(--ink);
     }
+
     input{
       width:100%;
       padding:14px 14px;
@@ -156,15 +180,18 @@
       background:#fff;
       outline:none;
     }
+
     input:focus{
       border-color:var(--gold);
       box-shadow:0 0 0 4px rgba(200,169,107,.15);
     }
+
     .radioWrap{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
     }
+
     .radioPill{
       flex:1 1 160px;
       border:1px solid #d9d2c5;
@@ -176,16 +203,19 @@
       background:#fff;
       cursor:pointer;
     }
+
     .radioPill input{
       width:auto;
       margin:0;
     }
+
     .helper{
       font-size:13px;
       color:var(--muted);
       margin-top:4px;
       line-height:1.5;
     }
+
     .consent{
       margin:12px 0 18px;
       padding:14px 16px;
@@ -196,6 +226,7 @@
       line-height:1.6;
       color:#5a5143;
     }
+
     .btn{
       width:100%;
       border:none;
@@ -208,12 +239,17 @@
       cursor:pointer;
       transition:.2s ease;
     }
-    .btn:hover{transform:translateY(-1px)}
+
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+
     .btn:disabled{
       cursor:not-allowed;
       opacity:.55;
       transform:none;
     }
+
     .note{
       margin-top:12px;
       font-size:12px;
@@ -221,22 +257,235 @@
       color:var(--muted);
       line-height:1.5;
     }
+
     .thankyou{
       display:none;
       text-align:center;
       padding:42px 20px;
     }
+
     .thankyou h2{
       margin:0 0 10px;
       color:var(--ok);
       font-size:30px;
     }
+
     .thankyou p{
       margin:0;
       color:var(--muted);
       font-size:17px;
     }
+
     @media (max-width: 860px){
-      .hero{grid-template-columns:1fr}
-      h1{font-size:34px}
-    
+      .hero{
+        grid-template-columns:1fr;
+      }
+      h1{
+        font-size:34px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .wrap{
+        padding:16px;
+      }
+      .grid{
+        grid-template-columns:1fr;
+      }
+      .agent{
+        align-items:flex-start;
+      }
+      .agent img{
+        width:84px;
+        height:84px;
+      }
+      .logos img{
+        max-height:60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <section class="card brand">
+        <span class="badge">Property Access</span>
+        <h1>Get instant access to property details, photos, and private showing options.</h1>
+        <p class="sub">
+          Please complete this quick form to continue. Once submitted, you’ll be taken directly to the full property page.
+        </p>
+
+        <div class="logos">
+          <img src="./assets/LINO REMAX 2025.png" alt="Lino Arci Team and RE/MAX branding">
+        </div>
+
+        <div class="agent">
+          <img src="./assets/SanjeevKheraHeadshotLinoArci.jpg" alt="Sanjeev Khera headshot">
+          <div class="meta">
+            <strong>Sanjeev Khera</strong>
+            <span>Sales Representative</span>
+            <span>RE/MAX Hallmark Realty Ltd., Brokerage</span>
+            <span>Lino Arci Team</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card formCard">
+        <div id="formArea">
+          <h2 class="formTitle">Access This Property</h2>
+          <p class="formText">Enter your details below to continue to the listing page.</p>
+
+          <form id="leadForm">
+            <div class="grid">
+              <div class="field full">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="field full">
+                <label>Are you currently Signed-Up with a real estate agent under a Buyer Representation Agreement?</label>
+                <div class="radioWrap">
+                  <label class="radioPill">
+                    <input type="radio" name="workingWithRealtor" value="Yes">
+                    <span>Yes</span>
+                  </label>
+                  <label class="radioPill">
+                    <input type="radio" name="workingWithRealtor" value="No">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="field full" id="realtorFields" style="display:none;">
+                <div class="grid">
+                  <div class="field">
+                    <label for="realtorName">Realtor Name</label>
+                    <input type="text" id="realtorName" name="realtorName">
+                  </div>
+                  <div class="field">
+                    <label for="realtorPhone">Realtor Phone Number</label>
+                    <input type="tel" id="realtorPhone" name="realtorPhone">
+                  </div>
+                </div>
+                <div class="helper">If you selected “Yes”, both fields above are required before submission.</div>
+              </div>
+            </div>
+
+            <div class="consent">
+              By clicking submit, you consent to being contacted by Sanjeev Khera, Sales Representative, RE/MAX Hallmark Realty Ltd., Brokerage, regarding this property and similar properties. This communication is not intended to solicit individuals currently under contract with another brokerage.
+            </div>
+
+            <button type="submit" class="btn" id="submitBtn">Submit & Continue</button>
+            <div class="note">You’ll be redirected automatically after submission.</div>
+          </form>
+        </div>
+
+        <div id="thankyou" class="thankyou">
+          <h2>Thank you.</h2>
+          <p>Taking you to the property page now…</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const webhookURL = "https://script.google.com/macros/s/AKfycbx2LQY-C-o5opgz173B7mLPRIzv91lfkZMI9TJYXjUlAhk1Mz45IoqoA034C0C4M8zTXw/exec";
+    const redirectURL = "https://khera-ca.github.io/ForSale-qr/ForSale-qr.html";
+    const propertyAddress = "CHANGE PER LISTING";
+    const source = "ForSale QR";
+
+    const form = document.getElementById("leadForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const realtorFields = document.getElementById("realtorFields");
+    const realtorName = document.getElementById("realtorName");
+    const realtorPhone = document.getElementById("realtorPhone");
+    const radios = document.querySelectorAll('input[name="workingWithRealtor"]');
+
+    function selectedRealtorAnswer() {
+      const checked = document.querySelector('input[name="workingWithRealtor"]:checked');
+      return checked ? checked.value : "";
+    }
+
+    function updateFormState() {
+      const answer = selectedRealtorAnswer();
+
+      if (answer === "Yes") {
+        realtorFields.style.display = "block";
+        realtorName.required = true;
+        realtorPhone.required = true;
+      } else {
+        realtorFields.style.display = "none";
+        realtorName.required = false;
+        realtorPhone.required = false;
+      }
+
+      const baseValid =
+        document.getElementById("firstName").value.trim() &&
+        document.getElementById("phone").value.trim() &&
+        document.getElementById("email").value.trim() &&
+        answer;
+
+      let realtorValid = true;
+      if (answer === "Yes") {
+        realtorValid = realtorName.value.trim() && realtorPhone.value.trim();
+      }
+
+      submitBtn.disabled = !(baseValid && realtorValid);
+    }
+
+    radios.forEach(r => r.addEventListener("change", updateFormState));
+    document.querySelectorAll("input").forEach(i => i.addEventListener("input", updateFormState));
+    updateFormState();
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
+
+      const workingWithRealtor = selectedRealtorAnswer();
+
+      const formData = new URLSearchParams();
+      formData.append("firstName", document.getElementById("firstName").value.trim());
+      formData.append("phone", document.getElementById("phone").value.trim());
+      formData.append("email", document.getElementById("email").value.trim());
+      formData.append("workingWithRealtor", workingWithRealtor);
+      formData.append("realtorName", realtorName.value.trim());
+      formData.append("realtorPhone", realtorPhone.value.trim());
+      formData.append("source", source);
+      formData.append("pageUrl", window.location.href);
+      formData.append("userAgent", navigator.userAgent);
+      formData.append("propertyAddress", propertyAddress);
+
+      try {
+        await fetch(webhookURL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: formData.toString()
+        });
+
+        document.getElementById("formArea").style.display = "none";
+        document.getElementById("thankyou").style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = redirectURL;
+        }, 1000);
+      } catch (error) {
+        alert("Something went wrong. Please try again.");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit & Continue";
+      }
+    });
+  </script>
+</body>
+</html>
